@@ -15,7 +15,7 @@ Code file - infrastructure.js
 
 ####TASKS:
 
-Complete git/hook setup for triggering deployment on push.
+###### Complete git/hook setup for triggering deployment on push.
 
 Performed tasks as mentioned in the [Deployment Workshop]. Added respective statements in the post-receive hook to set work tree and perform npm install.
 
@@ -74,13 +74,13 @@ To handle "mirroring", a 'flag' has been introduced and set to 0 by default. If 
 
 ```sh
 if(flag==1)
-        {
-          if(req.method=='get')
-            req.pipe(request.get(SECONDARYTARGET+req.url))
-          else if (req.method=='post')
-            req.pipe(request.post(SECONDARYTARGET+req.url))
-        }
-       proxy.web(req, res, { target: PRIMARYTARGET });
+  {
+    if(req.method=='get')
+      req.pipe(request.get(SECONDARYTARGET+req.url))
+    else if (req.method=='post')
+      req.pipe(request.post(SECONDARYTARGET+req.url))
+  }
+proxy.web(req, res, { target: PRIMARYTARGET });
 ```
 
 
