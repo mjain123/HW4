@@ -1,0 +1,7 @@
+[submodule "Deployment"]
+	path = Deployment
+	url = https://github.com/mjain123/HW4-Deployment.git
+
+[submodule "Redis-Queues-ProxyServer"]
+	path = Redis-Queues-ProxyServer
+	url = https://github.com/mjain123/HW4-App.git
