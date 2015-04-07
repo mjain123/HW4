@@ -1,6 +1,6 @@
 # HW4 - AUTO DEPLOYMENT AND SWITCH
 
-#####SUB REPOSITORIES -
+#####Sub Repositories -
 
 1. Deployment - Main application. Manages requests to blue and green slices of repository HW4-App (Redis-Queues-Proxy)
 2. HW4-App - Replication of repository Redis-Queues-Proxy. 
@@ -17,7 +17,7 @@ Code file - infrastructure.js
 
 Complete git/hook setup for triggering deployment on push.
 
-Performed tasks as mentioned in the [Deployment Workshop]
+Performed tasks as mentioned in the [Deployment Workshop]. Added respective statements in the post-receive hook to set work tree and perform npm install.
 
 ![image1](/images/bluegreeninfrastructure.JPG)
 
@@ -29,6 +29,7 @@ Updated redis client in blue-www/main.js to connect to 6379 and redis client in 
 BLUE
 
 `var client = redis.createClient(6379, '127.0.0.1', {});`
+
 GREEN
 
 `var client = redis.createClient(6380, '127.0.0.1', {});`
