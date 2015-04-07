@@ -2,8 +2,8 @@
 
 #####Sub Repositories -
 
-1. Deployment - Main application. Manages requests to blue and green slices of repository HW4-App (Redis-Queues-Proxy)
-2. HW4-App - Replication of repository Redis-Queues-Proxy. 
+1. Deployment - Main application. Manages requests to blue and green slices of repository Redis-Queues-Proxy.
+2. Redis-Queues-Proxy - Simple application having commands `/get`, `/recent`, `/set` and `/upload` to perform task using redis.
 
 Code file - infrastructure.js
 
@@ -34,6 +34,7 @@ GREEN
 
 `var client = redis.createClient(6380, '127.0.0.1', {});`
 
+![image1](/images/redisserver.JPG)
 
 ###### Default infrastructure will route traffic to the blue instance.
 
@@ -48,6 +49,8 @@ Default setup in infrastructure.js
 ###### Introduce a new route, `/switch`, that will trigger a switch from "blue" to "green" and vice versa.
 
 New route `/switch` accepts get requests and switches between Primary and Secondary Target based on their values.
+
+![image1](/images/switch.JPG)
 
 ###### Recall, the `/upload` and `/meow` routes.  Extend `/switch` so that if a redis instance currently has values in the picture list, then migrate those instances over to the new instance.
 
