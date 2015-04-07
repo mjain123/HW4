@@ -4,4 +4,4 @@
 
 [submodule "Redis-Queues-ProxyServer"]
 	path = Redis-Queues-ProxyServer
-	url = https://github.com/mjain123/HW4-App.git
+	url = https://github.com/mjain123/Redis-Queues-ProxyServer.git
